@@ -30,7 +30,7 @@ func (c *MainController) Get() {
 		} else {
 			var content []map[string]interface{}
 			json.Unmarshal(body, &content)
-			c.Data["content"] = &content
+			c.Data["content"] = content
 			c.TplName = "index.tpl"
 		}
 	}
